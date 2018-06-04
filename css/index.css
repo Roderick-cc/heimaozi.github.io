@@ -149,8 +149,8 @@ pre,
   overflow: auto;
   margin: 1rem 0;
   padding: 0;
-  background: #263238;
-  color: #eff;
+  background: #292d3e;
+  color: #a6accd;
   font-size: 14px;
   line-height: 20px;
 }
@@ -177,7 +177,7 @@ code {
 pre code {
   padding: 0;
   background: none;
-  color: #eff;
+  color: #a6accd;
   text-shadow: none;
 }
 .highlight {
@@ -200,7 +200,7 @@ pre code {
 .highlight figcaption {
   zoom: 1;
   margin-bottom: 1em;
-  color: #eff;
+  color: #a6accd;
   font-size: 1em;
   line-height: 1em;
 }
@@ -214,23 +214,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #eff;
+  color: #a6accd;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #eff;
+  border-bottom-color: #a6accd;
 }
 .highlight .gutter pre {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  background-color: #263238;
-  color: #37474f;
+  background-color: #292d3e;
+  color: #3a3f58;
   text-align: right;
 }
 .highlight .code pre {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   width: 100%;
-  background-color: #263238;
+  background-color: #292d3e;
 }
 .highlight .line {
   height: 1rem;
@@ -260,7 +260,7 @@ pre .meta {
   color: #c792ea;
 }
 pre .comment {
-  color: #546e7a;
+  color: #676e95;
 }
 pre .variable,
 pre .attribute,
@@ -1310,7 +1310,7 @@ img:hover {
   position: absolute;
   top: 6px;
   right: 0;
-  background: #263238;
+  background: #292d3e;
   color: #89ddff;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
