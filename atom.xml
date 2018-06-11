@@ -5,9 +5,9 @@
   <subtitle>Torch down,the flame is still upward.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://dobinspark.com.cn/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2018-06-06T01:47:59.678Z</updated>
-  <id>http://dobinspark.com.cn/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Dobin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>mobile</title>
-    <link href="http://dobinspark.com.cn/2018/06/04/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%92%E5%88%86/"/>
-    <id>http://dobinspark.com.cn/2018/06/04/移动端设备的划分/</id>
+    <link href="http://yoursite.com/2018/06/04/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%92%E5%88%86/"/>
+    <id>http://yoursite.com/2018/06/04/移动端设备的划分/</id>
     <published>2018-06-04T07:31:01.000Z</published>
     <updated>2018-06-06T01:47:59.678Z</updated>
     
@@ -35,29 +35,7 @@
     </summary>
     
     
-      <category term="case" scheme="http://dobinspark.com.cn/tags/case/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ces</title>
-    <link href="http://dobinspark.com.cn/2018/06/04/%E6%B5%8B%E8%AF%9511/"/>
-    <id>http://dobinspark.com.cn/2018/06/04/测试11/</id>
-    <published>2018-06-04T07:30:40.000Z</published>
-    <updated>2018-06-05T09:14:21.262Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试&lt;/p&gt;
-
-      
-    
-    </summary>
-    
+      <category term="case" scheme="http://yoursite.com/tags/case/"/>
     
   </entry>
   
