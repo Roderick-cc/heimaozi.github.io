@@ -40,6 +40,21 @@
 </head>
 
 <body>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
@@ -397,7 +412,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/04/移动端设备的划分 - 副本 (2)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/04/移动端设备的划分/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -406,11 +421,6 @@
       </div>
     </a>
   
-  
-    <a href="/2018/06/04/移动端设备的划分 - 副本 (4)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mobile</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
