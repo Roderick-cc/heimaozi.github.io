@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-20T07:27:49.354Z</updated>
+  <updated>2018-06-20T03:14:15.543Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Blog</title>
-    <link href="http://yoursite.com/2018/06/15/name/"/>
-    <id>http://yoursite.com/2018/06/15/name/</id>
-    <published>2018-06-15T07:43:04.000Z</published>
-    <updated>2018-06-20T07:27:49.354Z</updated>
-    
-    <content type="html"><![CDATA[<p>有个博客还是很帅气的，所以买了个域名使用GitHub做库，搭建来记录个人的学习过程和学习总结，一个从事IT行业又搞技术的猿狮，坚持写博客总结，这样做是很有意义的，并且是很有必要的！</p><a id="more"></a><h4 id="1-皮两句，博客益处"><a href="#1-皮两句，博客益处" class="headerlink" title="1.皮两句，博客益处"></a>1.皮两句，博客益处</h4><ul><li>我想许多开发者都有一个梦想，那就是在将来某一天能发布属于自己的产品，或者说作品吧。</li><li>相对于一纸简历来言，一个好的技术博客更能反映出你的能力和知识储备。认真经营一个技术博客还能让你的机会大大提升。</li><li>当你有个想法不确定，最好的办法就是发表在网络上，网友会毫不吝啬说出他们的想法，帮你找出开发中的问题，交流能使你开阔领域，这一点还是很欢迎各位学者、路人、大牛能够指点迷津一下滴！</li></ul><h4 id="2-博客搭建"><a href="#2-博客搭建" class="headerlink" title="2.博客搭建"></a>2.博客搭建</h4><p>​    之前还是想写一篇文章关于博客搭建，不过更多的时间还是自己学习去了，没什么时间写（后期有时间再写吧），百度上还是很多关于搭建博客的文章的，至于想要什么样的就自己去找了，这个博客主题用的是Yilia ,至于动态几何的背景和点击烟花效果文章目录等呢都是自己加的！    </p><p>​    1.评论系统用的是韩国的来比力，网易云跟帖、多说等评论系统都倒闭或者关闭了，之前测试是用的另外一个畅言，需要备案所以抛弃了。</p><p>​    2.SEO优化问题，百度输入dobinspark.com.cn域名是能够搜索到我的博客的，这一点在百度站点管理能够解决。</p><p>​    3.博客现在还没有图片的功能，打算用七牛云的，注册有点麻烦，这点很伤。有空再拍吧!</p><p>ps:后期会写篇文章总结写博客搭建。有好玩的新功能或者模块欢迎email我！(#^.^#)</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有个博客还是很帅气的，所以买了个域名使用GitHub做库，搭建来记录个人的学习过程和学习总结，一个从事IT行业又搞技术的猿狮，坚持写博客总结，这样做是很有意义的，并且是很有必要的！&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
   
   <entry>
     <title>Test</title>
