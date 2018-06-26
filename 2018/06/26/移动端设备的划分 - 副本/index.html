@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dobin</title>
+  <title>Dobin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="my blog">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
+  <meta name="description" content="​    　1. HTTP 简介 　　　　1.1定义 　　　　1.2 请求/响应报文格式 　　　　1.3请求方式–GET/POST     状态码 　　　　1.4 响应状态 　　2. HTTP请求，浏览器做了什么, 服务端处理解析过程">
+<meta name="keywords" content="Http">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Dobin">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/06/26/移动端设备的划分 - 副本/index.html">
 <meta property="og:site_name" content="Dobin">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="​    　1. HTTP 简介 　　　　1.1定义 　　　　1.2 请求/响应报文格式 　　　　1.3请求方式–GET/POST     状态码 　　　　1.4 响应状态 　　2. HTTP请求，浏览器做了什么, 服务端处理解析过程">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626134034868-391056346.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626140429906-620907297.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626140754773-869507871.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626094244912-1096955678.png">
+<meta property="og:updated_time" content="2018-06-26T06:30:51.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dobin">
-<meta name="twitter:description" content="my blog">
+<meta name="twitter:description" content="​    　1. HTTP 简介 　　　　1.1定义 　　　　1.2 请求/响应报文格式 　　　　1.3请求方式–GET/POST     状态码 　　　　1.4 响应状态 　　2. HTTP请求，浏览器做了什么, 服务端处理解析过程">
+<meta name="twitter:image" content="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626134034868-391056346.png">
   
     <link rel="alternative" href="/atom.xml" title="Dobin" type="application/atom+xml">
   
@@ -183,30 +189,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-移动端设备的划分 - 副本" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1：HTTP简介"><span class="toc-number">1.</span> <span class="toc-text">1：HTTP简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-HTTP请求，浏览器做了什么-服务端处理解析过程"><span class="toc-number">2.</span> <span class="toc-text">2. HTTP请求，浏览器做了什么, 服务端处理解析过程</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+      
+
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    　<strong>1. HTTP 简介</strong></p>
+<p>　　　　1.1定义</p>
+<p>　　　　1.2 请求/响应报文格式</p>
+<p>　　　　1.3请求方式–GET/POST     状态码</p>
+<p>　　　　1.4 响应状态</p>
+<p>　　<strong>2. HTTP请求，浏览器做了什么, 服务端处理解析过程</strong></p>
+ <a id="more"></a>
+<h2 id="1：HTTP简介"><a href="#1：HTTP简介" class="headerlink" title="1：HTTP简介"></a><strong>1：HTTP简介</strong></h2><p><strong>　　1.1</strong></p>
+<p>　　HTTP（HyperText Transfer Protocol，超文本传输协议）最早就是计算机与计算机之间沟通的一种标准协议，这 种协议限制了通讯内容的格式以及各项内容的含义。</p>
+<p>　　随着时代的发展，技术的变迁，这种协议现在广泛的应用在各种领域，也不仅仅局限于计算机与计算机之间，手 机、电视等各种智能设备很多时候都在使用这种协议通讯，所以一般现在称 HTTP 为端与端之间的通讯协议。</p>
+<p><img src="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626134034868-391056346.png" alt="img"></p>
+<p>　　Web 属于 B/S 架构的应用软件，在 B/S 架构中，浏览器与服务器沟通的协议就是 HTTP 协议，作为一个合格的 Web 开发者，了解 HTTP 协议中约定的内容是一门必修课。</p>
+<p>　　应用软件架构一般分为两类： B/S 架构：Browser（浏览器） ←→ Server（服务器），这种软件都是通过浏览器访问一个网站使用， 服务器提供数据存储等服务。 C/S 架构：Client（客户端） ←→ Server（服务器），这种软件通过安装一个软件到电脑，然后使用， 服务器提供数据存储等服务。</p>
+<p><strong>　　1.2请求报文的格式</strong></p>
+<p><strong>　　</strong>请求行    —》请求方式 请求路径 HTTP协议版本  （一般GET请求主观上都是去‘拿东西’，所以使用需要看情况）</p>
+<p>　　请求头    —》客户端想要告诉服务端的一些额外信息</p>
+<p>　　空行</p>
+<p>　　请求体   —》客户端想要发送给服务端的数据正文</p>
+<p><strong>　　　　<img src="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626140429906-620907297.png" alt="img"></strong></p>
+<p>　　</p>
+<p> 　　<strong>1.3请求的方式GET/POST    状态码</strong></p>
+<p>　　根据HTTP标准，HTTP请求可以使用多种请求方法。</p>
+<p>　　HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法。</p>
+<p>　　HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。</p>
+<p>具体的请查看官方文档：</p>
+<p>　　<a href="http://www.runoob.com/http/http-methods.html" target="_blank" rel="noopener">http://www.runoob.com/http/http-methods.html</a></p>
+<p>　　<a href="http://www.w3school.com.cn/tags/html_ref_httpmethods.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/tags/html_ref_httpmethods.asp</a></p>
+<p> <img src="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626140754773-869507871.png" alt="img"></p>
+<p>　<strong>　　状态码：了解即可</strong></p>
+<p>　　状态代码由三位数字组成，第一个数字定义了响应的类别，且有五种可能取值。</p>
+<p>　　1xx：指示信息 —— 表示请求已接收，继续处理。</p>
+<p>　　2xx：成功 —— 表示请求已被成功接收、理解、接受。</p>
+<p>　　3xx：重定向 —— 要完成请求必须进行更进一步的操作。</p>
+<p>　　4xx：客户端错误 —— 请求有语法错误或请求无法实现。</p>
+<p>　　5xx：服务器端错误 —— 服务器未能实现合法的请求。</p>
+<p>　<strong>　常见状态代码、状态描述的说明如下。</strong></p>
+<p>　　200 OK：客户端请求成功。</p>
+<p>　　400 Bad Request：客户端请求有语法错误，不能被服务器所理解。</p>
+<p>　　401 Unauthorized：请求未经授权，这个状态代码必须和 WWW-Authenticate 报头域一起使用。</p>
+<p>　　403 Forbidden：服务器收到请求，但是拒绝提供服务。</p>
+<p>　　404 Not Found：请求资源不存在，举个例子：输入了错误的URL。</p>
+<p>　　 500 Internal Server Error：服务器发生不可预期的错误。 503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常。</p>
+<h2 id="2-HTTP请求，浏览器做了什么-服务端处理解析过程"><a href="#2-HTTP请求，浏览器做了什么-服务端处理解析过程" class="headerlink" title="2. HTTP请求，浏览器做了什么, 服务端处理解析过程"></a><strong>2. HTTP请求，浏览器做了什么, 服务端处理解析过程</strong></h2><p>　　下面这张图我觉得比任何文字描述都清晰了，我这里就不再做详细介绍了，此图根据不同的操作系统，会有不同的概念，此为：Windows下的Apache+PHP环境。</p>
+<p><img src="https://images2018.cnblogs.com/blog/1329093/201806/1329093-20180626094244912-1096955678.png" alt="img"></p>
+<p>​     结语：以上过程仅是个人理解，或许有错误的地方，也或者有还未理解到的层面，如果看到有错误或者有所指点的还希望不吝赐教指正！抱拳，感谢！O(∩_∩)O哈哈</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>不存在的，测试而已！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/timg.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/yes.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/移动端设备的划分 - 副本/" class="archive-article-date">
-  	<time datetime="2018-06-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -218,65 +318,144 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/26/移动端设备的划分 - 副本/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/移动端设备的划分/" class="archive-article-date">
-  	<time datetime="2018-06-04T07:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/04/移动端设备的划分/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Test</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/移动端设备的划分/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">case</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mobile</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Dom</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1：HTTP简介"><span class="toc-number">1.</span> <span class="toc-text">1：HTTP简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-HTTP请求，浏览器做了什么-服务端处理解析过程"><span class="toc-number">2.</span> <span class="toc-text">2. HTTP请求，浏览器做了什么, 服务端处理解析过程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA5Ni8xMzYzMg==" style="margin:30px;margin-top:20px;padding-left:6.5%;padding-right:6.5%;background-color:#ffffff;">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� -->
+
+
   
-  
-    </div></section>
+    
   
 
-    
+
+
+  
+
+  
+
+  
+
 
 
           </div>
@@ -307,8 +486,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
