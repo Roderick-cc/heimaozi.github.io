@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Dobin</title>
-  <icon>https://www.gravatar.com/avatar/e68e0574df1b17f4ade7922f9f8b4ac3</icon>
+  <title>Dobin | 越努力越幸运</title>
+  <icon>https://www.gravatar.com/avatar/679dfda83291fcb6eecd3432e70489dc</icon>
   <subtitle>Torch down,the flame is still upward.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -10,8 +10,8 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Dobin</name>
-    <email>1002133015@qq.com</email>
+    <name>Luo Shide</name>
+    <email>dobinspark@163.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
