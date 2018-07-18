@@ -185,6 +185,511 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-3.H5新增API" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/18/3.H5新增API/">Test</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/18/3.H5新增API/" class="archive-article-date">
+  	<time datetime="2018-07-18T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
+</a>
+        
+      </header>
+    
+
+
+
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="H5-新增操作dom元素"><a href="#H5-新增操作dom元素" class="headerlink" title="H5-新增操作dom元素"></a>H5-新增操作dom元素</h3><h5 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByClassName (<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//通过类名获取元素，以伪数组形式存在。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'selector'</span>);</span><br><span class="line"><span class="comment">//通过CSS选择器获取元素，符合匹配条件的第1个元素。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'selector'</span>); </span><br><span class="line"><span class="comment">//通过CSS选择器获取元素，以伪数组形式存在。</span></span><br></pre></td></tr></table></figure>
+<h5 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Node.classList.add(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//添加class</span></span><br><span class="line"></span><br><span class="line">Node.classList.remove(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//移除class</span></span><br><span class="line"></span><br><span class="line">Node.classList.toggle(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//切换class，有则移除，无则添加</span></span><br><span class="line"></span><br><span class="line">Node.classList.contains(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//检测是否存在class</span></span><br></pre></td></tr></table></figure>
+<h5 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h5><blockquote>
+<p>在HTML5中我们可以自定义属性，其格式如下data-*=””</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span> <span class="attr">data-my-name</span>=<span class="string">"itcast"</span> <span class="attr">data-age</span>=<span class="string">"10"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">/*</span></span><br><span class="line"><span class="undefined">  Node.dataset是以对象形式存在的，当我们为同一个DOM节点指定了多个自定义属性时，</span></span><br><span class="line"><span class="undefined">  Node.dataset则存储了所有的自定义属性的值。</span></span><br><span class="line"><span class="undefined">  */</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> demo = <span class="built_in">document</span>.querySelector(反馈);</span></span><br><span class="line"><span class="javascript"><span class="comment">//获取</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//注：当我们如下格式设置时，则需要以驼峰格式才能正确获取</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> name = demo.dataset[<span class="string">'myName'</span>];</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> age = demo.dataset[<span class="string">'age'</span>];</span></span><br><span class="line"><span class="javascript"><span class="comment">//设置</span></span></span><br><span class="line"><span class="javascript">demo.dataset[<span class="string">'name'</span>] = <span class="string">'web developer'</span>;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="H5-新增API"><a href="#H5-新增API" class="headerlink" title="H5-新增API"></a>H5-新增API</h3><h5 id="全屏方法"><a href="#全屏方法" class="headerlink" title="全屏方法"></a>全屏方法</h5><blockquote>
+<p>HTML5规范允许用户自定义网页上任一元素全屏显示。</p>
+</blockquote>
+<ul>
+<li>Node.requestFullScreen() 开启全屏显示</li>
+<li>Node.cancelFullScreen() 关闭全屏显示</li>
+<li>由于其兼容性原因，不同浏览器需要添加前缀如：<br>webkit内核浏览器：webkitRequestFullScreen、webkitCancelFullScreen，如chrome浏览器。<br>Gecko内核浏览器：mozRequestFullScreen、mozCancelFullScreen，如火狐浏览器。</li>
+<li>document.fullScreen检测当前是否处于全屏<br>不同浏览器需要添加前缀<br>document.webkitIsFullScreen、document.mozFullScreen</li>
+</ul>
+<h5 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h5><blockquote>
+<p>自定义播放器</p>
+</blockquote>
+<p>方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addTextTrack()</td>
+<td>向音频/视频添加新的文本轨道</td>
+</tr>
+<tr>
+<td>canPlayType()</td>
+<td>检测浏览器是否能播放指定的音频/视频类型</td>
+</tr>
+<tr>
+<td>load()</td>
+<td>重新加载音频/视频元素</td>
+</tr>
+<tr>
+<td>play()</td>
+<td>开始播放音频/视频</td>
+</tr>
+<tr>
+<td>pause()</td>
+<td>暂停当前播放的音频/视频</td>
+</tr>
+</tbody>
+</table>
+<p>属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>audioTracks</td>
+<td>返回表示可用音轨的 AudioTrackList 对象</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>设置或返回是否在加载完成后随即播放音频/视频</td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>返回表示音频/视频已缓冲部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>controller</td>
+<td>返回表示音频/视频当前媒体控制器的 MediaController 对象</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>设置或返回音频/视频是否显示控件（比如播放/暂停等）</td>
+</tr>
+<tr>
+<td>crossOrigin</td>
+<td>设置或返回音频/视频的 CORS 设置</td>
+</tr>
+<tr>
+<td>currentSrc</td>
+<td>返回当前音频/视频的 URL</td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+</tr>
+<tr>
+<td>defaultMuted</td>
+<td>设置或返回音频/视频默认是否静音</td>
+</tr>
+<tr>
+<td>defaultPlaybackRate</td>
+<td>设置或返回音频/视频的默认播放速度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>返回当前音频/视频的长度（以秒计）</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>返回音频/视频的播放是否已结束</td>
+</tr>
+<tr>
+<td>error</td>
+<td>返回表示音频/视频错误状态的 MediaError 对象</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>设置或返回音频/视频是否应在结束时重新播放</td>
+</tr>
+<tr>
+<td>mediaGroup</td>
+<td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>设置或返回音频/视频是否静音</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>返回音频/视频的当前网络状态</td>
+</tr>
+<tr>
+<td>paused</td>
+<td>设置或返回音频/视频是否暂停</td>
+</tr>
+<tr>
+<td>playbackRate</td>
+<td>设置或返回音频/视频播放的速度</td>
+</tr>
+<tr>
+<td>played</td>
+<td>返回表示音频/视频已播放部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>返回音频/视频当前的就绪状态</td>
+</tr>
+<tr>
+<td>seekable</td>
+<td>返回表示音频/视频可寻址部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>返回用户是否正在音频/视频中进行查找</td>
+</tr>
+<tr>
+<td>src</td>
+<td>设置或返回音频/视频元素的当前来源</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>返回表示当前时间偏移的 Date 对象</td>
+</tr>
+<tr>
+<td>textTracks</td>
+<td>返回表示可用文本轨道的 TextTrackList 对象</td>
+</tr>
+<tr>
+<td>videoTracks</td>
+<td>返回表示可用视频轨道的 VideoTrackList 对象</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>设置或返回音频/视频的音量</td>
+</tr>
+</tbody>
+</table>
+<p>事件</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abort</td>
+<td>当音频/视频的加载已放弃时</td>
+</tr>
+<tr>
+<td>canplay</td>
+<td>当浏览器可以播放音频/视频时</td>
+</tr>
+<tr>
+<td>canplaythrough</td>
+<td>当浏览器可在不因缓冲而停顿的情况下进行播放时</td>
+</tr>
+<tr>
+<td>durationchange</td>
+<td>当音频/视频的时长已更改时</td>
+</tr>
+<tr>
+<td>emptied</td>
+<td>当目前的播放列表为空时</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>当目前的播放列表已结束时</td>
+</tr>
+<tr>
+<td>error</td>
+<td>当在音频/视频加载期间发生错误时</td>
+</tr>
+<tr>
+<td>loadeddata</td>
+<td>当浏览器已加载音频/视频的当前帧时</td>
+</tr>
+<tr>
+<td>loadedmetadata</td>
+<td>当浏览器已加载音频/视频的元数据时</td>
+</tr>
+<tr>
+<td>loadstart</td>
+<td>当浏览器开始查找音频/视频时</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>当音频/视频已暂停时</td>
+</tr>
+<tr>
+<td>play</td>
+<td>当音频/视频已开始或不再暂停时</td>
+</tr>
+<tr>
+<td>playing</td>
+<td>当音频/视频在已因缓冲而暂停或停止后已就绪时</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>当浏览器正在下载音频/视频时</td>
+</tr>
+<tr>
+<td>ratechange</td>
+<td>当音频/视频的播放速度已更改时</td>
+</tr>
+<tr>
+<td>seeked</td>
+<td>当用户已移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>当用户开始移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>stalled</td>
+<td>当浏览器尝试获取媒体数据，但数据不可用时</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>当浏览器刻意不获取媒体数据时</td>
+</tr>
+<tr>
+<td>timeupdate</td>
+<td>当目前的播放位置已更改时</td>
+</tr>
+<tr>
+<td>volumechange</td>
+<td>当音量已更改时</td>
+</tr>
+<tr>
+<td>waiting</td>
+<td>当视频由于需要缓冲下一帧而停止</td>
+</tr>
+</tbody>
+</table>
+<h5 id="地理定位"><a href="#地理定位" class="headerlink" title="地理定位"></a>地理定位</h5><blockquote>
+<p>在HTML规范中，增加了获取用户地理信息的API，<br>这样使得我们可以基于用户位置开发互联网应用，<br>即基于位置服务 (Location Base Service)</p>
+</blockquote>
+<ul>
+<li>获取当前地理信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navigator.geolocation.getCurrentPosition(successCallback, errorCallback)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重复获取当前地理信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">navigator. geolocation.watchPosition(successCallback, errorCallback)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当成功获取地理信息后，会调用succssCallback，并返回一个包含位置信息的对象position。<br>position.coords.latitude纬度<br>position.coords.longitude经度<br>position.coords.accuracy精度<br>position.coords.altitude海拔高度</li>
+<li>当获取地理信息失败后，会调用errorCallback，并返回错误信息error</li>
+<li>在现实开发中，通过调用第三方API（如百度地图）来实现地理定位信息，这些API都是基于用户当前位置的，并将用位置位置（经/纬度）当做参数传递，就可以实现相应的功能。</li>
+</ul>
+<h5 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h5><blockquote>
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，<br>同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，<br>HTML5规范提出了相关解决方案。</p>
+</blockquote>
+<ul>
+<li>特性<ul>
+<li>设置、读取方便</li>
+<li>容量较大，sessionStorage约5M、</li>
+<li>localStorage约20M</li>
+<li>只能存储字符串，可以将对象JSON.stringify() 编码后存储</li>
+</ul>
+</li>
+<li>window.sessionStorage<ul>
+<li>生命周期为关闭浏览器窗口</li>
+<li>在同一个窗口(页面)下数据可以共享</li>
+</ul>
+</li>
+<li>window.localStorage<ul>
+<li>永久生效，除非手动删除（服务器方式访问然后清除缓存）</li>
+<li>可以多窗口（页面）共享</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>setItem(key, value) 设置存储内容</li>
+<li>getItem(key) 读取存储内容</li>
+<li>removeItem(key) 删除键值为key的存储内容</li>
+<li>clear() 清空所有存储内容</li>
+</ul>
+</li>
+</ul>
+<h5 id="历史管理"><a href="#历史管理" class="headerlink" title="历史管理"></a>历史管理</h5><blockquote>
+<p>提供window.history，对象我们可以管理历史记录，<br>可用于单页面应用，Single Page Application，可以无刷新改变网页内容。</p>
+</blockquote>
+<ul>
+<li><p>pushState(data, title, url) 追加一条历史记录  </p>
+<ul>
+<li><p>data用于存储自定义数据，通常设为null</p>
+<ul>
+<li>title网页标题，基本上没有被支持，一般设为空</li>
+</ul>
+<p>​+ url 以当前域为基础增加一条历史记录，不可跨域设置</p>
+</li>
+</ul>
+</li>
+<li><p>replaceState(data, title, url) 与pushState()基本相同，<br>不同之处在于replaceState()，只是替换当前url，不会增加/减少历史记录。</p>
+</li>
+<li><p>onpopstate事件，当前进或后退时则触发  </p>
+</li>
+</ul>
+<h5 id="离线应用"><a href="#离线应用" class="headerlink" title="离线应用"></a>离线应用</h5><blockquote>
+<p>HTML5中我们可以轻松的构建一个离线（无网络状态）应用，只需要创建一个cache manifest文件。</p>
+</blockquote>
+<ul>
+<li>优势<ul>
+<li>1、可配置需要缓存的资源</li>
+<li>2、网络无连接应用仍可用</li>
+<li>3、本地读取缓存资源，提升访问速度，增强用户体验</li>
+<li>4、减少请求，缓解服务器负担</li>
+</ul>
+</li>
+<li>缓存清单<ul>
+<li>一个普通文本文件，其中列出了浏览器应缓存以供离线访问的资源，推荐使用.appcache为后缀名</li>
+<li>例如我们创建了一个名为demo.appcache的文件，然后在需要应用缓存在页面的根元素(html)添加属性manifest=”demo.appcache”，路径要保证正确。</li>
+</ul>
+</li>
+<li>manifest文件格式<ul>
+<li>1、顶行写CACHE MANIFEST</li>
+<li>2、CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等</li>
+<li>3、NETWORK: 换行 指定需要在线访问的资源，可使用通配符</li>
+<li>4、FALLBACK: 换行 当被缓存的文件找不到时的备用资源</li>
+</ul>
+</li>
+<li>其它<ul>
+<li>1、CACHE: 可以省略，这种情况下将需要缓存的资源写在CACHE MANIFEST</li>
+<li>2、可以指定多个CACHE: NETWORK: FALLBACK:，无顺序限制</li>
+<li>3、#表示注释，只有当demo.appcache文件内容发生改变时或者手动清除缓存后，才会重新缓存。</li>
+<li>4、chrome 可以通过chrome://appcache-internals/工具和离线（offline）模式来调试管理应用缓存</li>
+</ul>
+</li>
+</ul>
+<h5 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h5><blockquote>
+<p>HTML5新增内建对象，可以读取本地文件内容。</p>
+<p>在HTML表单中，可以上传文件的唯一控件就是<code>&lt;input type=&quot;file&quot;&gt;</code>。</p>
+<p><em>注意</em>：当一个表单包含<code>&lt;input type=&quot;file&quot;&gt;</code>时，表单的<code>enctype</code>必须指定为<code>multipart/form-data</code>，<code>method</code>必须指定为<code>post</code>，浏览器才能正确编码并以<code>multipart/form-data</code>格式发送表单的数据。</p>
+<p>出于安全考虑，浏览器只允许用户点击<code>&lt;input type=&quot;file&quot;&gt;</code>来选择本地文件，用JavaScript对<code>&lt;input type=&quot;file&quot;&gt;</code>的value`赋值是没有任何效果的。当用户选择了上传某个文件后，JavaScript也无法获得该文件的真实路径</p>
+</blockquote>
+<p>HTML5的File API提供了<code>File</code>和<code>FileReader</code>两个主要对象，可以获得文件信息并读取文件。</p>
+<p>案例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;file&quot; class=&quot;file&quot; multiple&gt;</span><br><span class="line">&lt;img src=&quot;&quot; alt=&quot;&quot; id=&quot;img&quot;&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	/*获取到了文件表单元素*/</span><br><span class="line">	var file = document.querySelector(&apos;.file&apos;);</span><br><span class="line">	/*选择文件后触发*/</span><br><span class="line">	file.onchange = function () &#123;</span><br><span class="line">		/*初始化了一个文件读取对象*/</span><br><span class="line">		var reader = new FileReader();</span><br><span class="line">		/*读取文件数据  this.files[0] 文件表单元素选择的第一个文件 */</span><br><span class="line">		reader.readAsDataURL(this.files[0]);</span><br><span class="line">		/*读取的过程就相当于 加载过程 */</span><br><span class="line">		/*读取完毕  预览 */</span><br><span class="line">		reader.onload = function () &#123;</span><br><span class="line">		    /*读取完毕 base64位数据  表示图片*/</span><br><span class="line">		    console.log(this.result);</span><br><span class="line">			document.querySelector(&apos;#img&apos;).src = this.result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的代码演示了如何通过H5的file API读取文件内容。DateURL的形式读取到的问见是一个字符串，类似</p>
+<p><code>data:image/png;base64,iVBORw0KGgoAAAA</code>，常，用于设置图像。如果需要服务器端处理，把字符串base64,后面的字符发送给服务器并用Base64解码就可以得到原始文件的二进制内容。</p>
+<p>JavaScript的一个重要特性就是单线程执行模式，关于H5 文件操作这里还有一个说明是廖雪峰写的关于异步实现的文件操作，有兴趣的可以看一下</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143449993875172bbfac4b9764e2d9e2b5a17c706b3db000" target="_blank" rel="noopener"></a></p>
+<h5 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h5><p>事件</p>
+<p>box.addEventListener(‘drag’, function (e) {});</p>
+<table>
+<thead>
+<tr>
+<th>drag</th>
+<th>整个拖拽执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dragleave</td>
+<td>拖拽离开</td>
+</tr>
+<tr>
+<td>dragstart</td>
+<td>拖拽开始</td>
+</tr>
+<tr>
+<td>dragend</td>
+<td>拖拽结束</td>
+</tr>
+<tr>
+<td>dragover</td>
+<td>拖拽智商</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>拖拽松开</td>
+</tr>
+</tbody>
+</table>
+<h5 id="网络状态"><a href="#网络状态" class="headerlink" title="网络状态"></a>网络状态</h5><ul>
+<li>我们可以通过window.onLine来检测，用户当前的网络状况，返回一个布尔值<ul>
+<li>window.online用户网络连接时被调用</li>
+<li>window.offline用户网络断开时被调用</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Dom</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/18/3.H5新增API/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-2.http" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -480,10 +985,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -493,6 +994,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Dom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
             
             <div class="clearfix"></div>
