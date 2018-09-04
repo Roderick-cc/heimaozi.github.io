@@ -54,9 +54,9 @@
     </summary>
     
     
-      <category term="note" scheme="https://dobinspark.com/tags/note/"/>
-    
       <category term="Vue" scheme="https://dobinspark.com/tags/Vue/"/>
+    
+      <category term="note" scheme="https://dobinspark.com/tags/note/"/>
     
   </entry>
   
@@ -172,11 +172,11 @@
     </summary>
     
     
+      <category term="note" scheme="https://dobinspark.com/tags/note/"/>
+    
       <category term="H5" scheme="https://dobinspark.com/tags/H5/"/>
     
       <category term="Array" scheme="https://dobinspark.com/tags/Array/"/>
-    
-      <category term="note" scheme="https://dobinspark.com/tags/note/"/>
     
   </entry>
   
