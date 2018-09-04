@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dobinspark.com">
-  <title>数组的常用方法-- Array 对象属性 | Dobin | 世德</title>
+  <title>Dobin | 世德</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一 数组的常用方法 —》Array 对象属性1.数组创建123var arr = new Array();　//创建一个数组var arr = new Array([size]);　//创建一个数组并指定长度var arr = new Array(arg1,arg2);　//创建一个数组并赋值 2. 数组元素的删除">
-<meta name="keywords" content="H5,Array,学习笔记">
+  <meta name="description" content="​    记录码字过程的小知识,持续更新  1.函数防抖 ​    lodash 是第三方JavaScript工具函数库  原理：使用闭包，每次调用的时候把上一次的定时器清除 1234567891011function debounce(callback,time)&amp;#123;  let timer  return function()&amp;#123;    //清除定时器    window.cl">
+<meta name="keywords" content="Dobin，dobinspark，罗世德的博客，前端开发，H5，全栈学习，程序员">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组的常用方法-- Array 对象属性">
-<meta property="og:url" content="https://dobinspark.com/2018/07/25/4.javascript数组操作/index.html">
+<meta property="og:title" content="Dobin | 世德">
+<meta property="og:url" content="https://dobinspark.com/2018/08/30/5.小知识/index.html">
 <meta property="og:site_name" content="Dobin | 世德">
-<meta property="og:description" content="一 数组的常用方法 —》Array 对象属性1.数组创建123var arr = new Array();　//创建一个数组var arr = new Array([size]);　//创建一个数组并指定长度var arr = new Array(arg1,arg2);　//创建一个数组并赋值 2. 数组元素的删除">
+<meta property="og:description" content="​    记录码字过程的小知识,持续更新  1.函数防抖 ​    lodash 是第三方JavaScript工具函数库  原理：使用闭包，每次调用的时候把上一次的定时器清除 1234567891011function debounce(callback,time)&amp;#123;  let timer  return function()&amp;#123;    //清除定时器    window.cl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-09T06:42:57.189Z">
+<meta property="og:updated_time" content="2018-09-04T03:49:06.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组的常用方法-- Array 对象属性">
-<meta name="twitter:description" content="一 数组的常用方法 —》Array 对象属性1.数组创建123var arr = new Array();　//创建一个数组var arr = new Array([size]);　//创建一个数组并指定长度var arr = new Array(arg1,arg2);　//创建一个数组并赋值 2. 数组元素的删除">
+<meta name="twitter:title" content="Dobin | 世德">
+<meta name="twitter:description" content="​    记录码字过程的小知识,持续更新  1.函数防抖 ​    lodash 是第三方JavaScript工具函数库  原理：使用闭包，每次调用的时候把上一次的定时器清除 1234567891011function debounce(callback,time)&amp;#123;  let timer  return function()&amp;#123;    //清除定时器    window.cl">
   
     <link rel="alternative" href="/atom.xml" title="Dobin | 世德" type="application/atom+xml">
   
@@ -184,164 +184,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-4.javascript数组操作" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-5.小知识" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      数组的常用方法-- Array 对象属性
-    </h1>
-  
-
-        
-        <a href="/2018/07/25/4.javascript数组操作/" class="archive-article-date">
-  	<time datetime="2018-07-25T06:48:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-25</time>
-</a>
-        
-      </header>
-    
 
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-数组的常用方法-—》Array-对象属性"><span class="toc-number">1.</span> <span class="toc-text">一 数组的常用方法 —》Array 对象属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数组创建"><span class="toc-number">1.1.</span> <span class="toc-text">1.数组创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数组元素的删除"><span class="toc-number">1.2.</span> <span class="toc-text">2. 数组元素的删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数组元素的添加"><span class="toc-number">1.3.</span> <span class="toc-text">3. 数组元素的添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-数组的截取和合并"><span class="toc-number">1.4.</span> <span class="toc-text">4. 数组的截取和合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-数组的复制"><span class="toc-number">1.5.</span> <span class="toc-text">5.数组的复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-数组排序"><span class="toc-number">1.6.</span> <span class="toc-text">6.数组排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-数组中的所有元素转换为一个字符串"><span class="toc-number">1.7.</span> <span class="toc-text">7.数组中的所有元素转换为一个字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-返回指定值在数组中的位置"><span class="toc-number">1.8.</span> <span class="toc-text">8. 返回指定值在数组中的位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-数组迭代过程"><span class="toc-number">2.</span> <span class="toc-text">二 数组迭代过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-filter"><span class="toc-number">2.1.</span> <span class="toc-text">1.filter()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-find"><span class="toc-number">2.2.</span> <span class="toc-text">2.find()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-findIndex"><span class="toc-number">2.3.</span> <span class="toc-text">3.findIndex()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-forEach-遍历数组"><span class="toc-number">2.4.</span> <span class="toc-text">4.forEach() 遍历数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-some"><span class="toc-number">2.5.</span> <span class="toc-text">5.some()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-every"><span class="toc-number">2.6.</span> <span class="toc-text">6.every()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于更多的对象属性方法请点击此查看"><span class="toc-number">3.</span> <span class="toc-text">关于更多的对象属性方法请点击此查看</span></a></li></ol>
-         </div>
-   <script type="text/javascript">
-  function showToc(){
-    var toc_article = document.getElementById("toc-article");
-    var show_toc_btn = document.getElementById("show-toc-btn");
-    toc_article.setAttribute("style","display:block");
-    show_toc_btn.setAttribute("style","display:none");
-    };
-  function showBtn(){
-    var toc_article = document.getElementById("toc-article");
-    var show_toc_btn = document.getElementById("show-toc-btn");
-    toc_article.setAttribute("style","display:none");
-    show_toc_btn.setAttribute("style","display:block");
-    };
-   </script>
-      
 
 
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一-数组的常用方法-—》Array-对象属性"><a href="#一-数组的常用方法-—》Array-对象属性" class="headerlink" title="一 数组的常用方法 —》Array 对象属性"></a>一 数组的常用方法 —》Array 对象属性</h2><h3 id="1-数组创建"><a href="#1-数组创建" class="headerlink" title="1.数组创建"></a>1.数组创建</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();　<span class="comment">//创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>([size]);　<span class="comment">//创建一个数组并指定长度</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(arg1,arg2);　<span class="comment">//创建一个数组并赋值</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-数组元素的删除"><a href="#2-数组元素的删除" class="headerlink" title="2. 数组元素的删除"></a>2. 数组元素的删除</h3><a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.shift(); <span class="comment">//移除最前一个元素并返回该元素值，数组中元素自动前移</span></span><br><span class="line">arr.pop(); <span class="comment">//移除最后一个元素并返回该元素值</span></span><br><span class="line">arr.splice(arg1,arg2); <span class="comment">//指定位置删除指定数量的元素  arg1为指定位置   arg2为指定数量</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-数组元素的添加"><a href="#3-数组元素的添加" class="headerlink" title="3. 数组元素的添加"></a>3. 数组元素的添加</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array. push();<span class="comment">// 将一个或多个新元素添加到数组结尾，并返回数组新长度</span></span><br><span class="line">array.unshift();<span class="comment">// 将一个或多个新元素添加到数组开头，并返回数组新长度</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-数组的截取和合并"><a href="#4-数组的截取和合并" class="headerlink" title="4. 数组的截取和合并"></a>4. 数组的截取和合并</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array.slice(start, end); <span class="comment">//提取字符串的某个部分，并以新的字符串返回被提取的部分。</span></span><br><span class="line">array.concat(arrayX,arrayX,......,arrayX); <span class="comment">//用于连接两个或多个数组,不会改变现有的数组，而仅仅会返回被连接数组的一个副本</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-数组的复制"><a href="#5-数组的复制" class="headerlink" title="5.数组的复制"></a>5.数组的复制</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下是对第四点的衍生获取源数组</span></span><br><span class="line">array.slice(<span class="number">0</span>);  <span class="comment">//第一个参数为0，第二个参数不写，即默认为从start开始提取至数组结尾</span></span><br><span class="line">array.concat();</span><br></pre></td></tr></table></figure>
-<h3 id="6-数组排序"><a href="#6-数组排序" class="headerlink" title="6.数组排序"></a>6.数组排序</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">array.reverse() <span class="comment">//方法用于颠倒数组中元素的顺序。</span></span><br><span class="line">array.sort() <span class="comment">///方法用于对数组的元素进行排序。排序顺序可以是字母或数字，并按升序或降序。默认排序顺序为按字母升序。注意：当数字是按字母顺序排列时"40"将排在"5"前面。使用数字排序，你必须通过一个函数作为参数来调用。函数指定数字是按照升序还是降序排列。通过本页底部实例进一步了解它。</span></span><br><span class="line"><span class="keyword">var</span> points = [<span class="number">40</span>,<span class="number">100</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">25</span>,<span class="number">10</span>];</span><br><span class="line">points.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a-b&#125;);</span><br><span class="line"></span><br><span class="line">输出结果：</span><br><span class="line">[<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">25</span>,<span class="number">40</span>,<span class="number">100</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="7-数组中的所有元素转换为一个字符串"><a href="#7-数组中的所有元素转换为一个字符串" class="headerlink" title="7.数组中的所有元素转换为一个字符串"></a>7.数组中的所有元素转换为一个字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.join([separator]) <span class="comment">//方法用于把数组中的所有元素转换一个字符串。元素可以通过指定的分隔符进行分隔的。</span></span><br><span class="line">eg:<span class="keyword">var</span> fruits = [<span class="string">"Banana"</span>, <span class="string">"Orange"</span>, <span class="string">"Apple"</span>, <span class="string">"Mango"</span>];</span><br><span class="line"><span class="keyword">var</span> energy = fruits.join();</span><br><span class="line">输出结果：</span><br><span class="line">Banana,Orange,Apple,Mango</span><br></pre></td></tr></table></figure>
-<h3 id="8-返回指定值在数组中的位置"><a href="#8-返回指定值在数组中的位置" class="headerlink" title="8. 返回指定值在数组中的位置"></a>8. 返回指定值在数组中的位置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="string">'x'</span>, <span class="string">'5'</span>];</span><br><span class="line">array.indexOf(<span class="number">1</span>); <span class="comment">// 元素1的索引为0</span></span><br><span class="line">array.indexOf(<span class="number">10</span>); <span class="comment">// 元素10没有找到，返回-1</span></span><br><span class="line">array.indexOf(<span class="string">'x'</span>); <span class="comment">// 元素'30'的索引为2</span></span><br></pre></td></tr></table></figure>
-<h2 id="二-数组迭代过程"><a href="#二-数组迭代过程" class="headerlink" title="二 数组迭代过程"></a>二 数组迭代过程</h2><h3 id="1-filter"><a href="#1-filter" class="headerlink" title="1.filter()"></a>1.filter()</h3><p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>
-<p><strong>注意：</strong> filter() 不会对空数组进行检测。filter() 不会改变原始数组。</p>
-<p>语法：array.filter(function(currentValue,index,arr), thisValue)</p>
-<table>
-<thead>
-<tr>
-<th>function(currentValue, index,arr)</th>
-<th>必须。函数，数组中的每个元素都会执行这个函数函数参数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>thisValue</em></td>
-<td>可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。如果省略了 thisValue ，”this” 的值为 “undefined”</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line"><span class="keyword">var</span> ages = [<span class="number">32</span>, <span class="number">33</span>, <span class="number">16</span>, <span class="number">40</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAdult</span>(<span class="params">age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> age &gt;= <span class="number">18</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = ages.filter(checkAdult);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出结果为:</span><br><span class="line"><span class="number">32</span>,<span class="number">33</span>,<span class="number">40</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-find"><a href="#2-find" class="headerlink" title="2.find()"></a>2.find()</h3><p>find() 返回符合测试条件的第一个数组元素值，如果没有符合条件的则返回 undefined。</p>
-<p>find() 方法为数组中的每个元素都调用一次函数执行：</p>
-<ul>
-<li>当数组中的元素在测试条件时返回 <em>true</em> 时, find() 返回符合条件的元素，之后的值不会再调用执行函数。</li>
-<li>如果没有符合条件的元素返回 undefined</li>
-</ul>
-<p>语法：array.find(function(currentValue, index, arr),thisValue)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ages = [<span class="number">3</span>, <span class="number">10</span>, <span class="number">18</span>, <span class="number">20</span>];</span><br><span class="line"> ages.find(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> item &gt; <span class="number">3</span></span><br><span class="line">    &#125;)</span><br><span class="line">返回值为：<span class="number">10</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-findIndex"><a href="#3-findIndex" class="headerlink" title="3.findIndex()"></a>3.findIndex()</h3><p>findIndex() 返回符合测试条件的第一个数组元素索引，如果没有符合条件的则返回 -1</p>
-<p>语法：array.findIndex(function(currentValue, index, arr), thisValue)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ages = [<span class="number">3</span>, <span class="number">10</span>, <span class="number">18</span>, <span class="number">20</span>];</span><br><span class="line"> ages.findIndex(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> item &gt; <span class="number">3</span></span><br><span class="line">    &#125;)</span><br><span class="line">返回值为：<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-forEach-遍历数组"><a href="#4-forEach-遍历数组" class="headerlink" title="4.forEach() 遍历数组"></a>4.forEach() 遍历数组</h3><p>forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>];</span><br><span class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123; </span><br><span class="line">  <span class="keyword">if</span>(item&gt;<span class="number">5</span>)&#123; <span class="built_in">console</span>.log(item) </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">输出结果为：</span><br><span class="line"><span class="number">9</span>,<span class="number">16</span>,<span class="number">25</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-some"><a href="#5-some" class="headerlink" title="5.some()"></a>5.some()</h3><p>some() 方法用于检测数组中的元素是否满足指定条件（函数提供）</p>
-<p>some() 方法会依次执行数组的每个元素：</p>
-<ul>
-<li>如果有一个元素满足条件，则表达式返回<em>true</em> , 剩余的元素不会再执行检测。</li>
-<li>如果没有满足条件的元素，则返回false。</li>
-</ul>
-<p><strong>注意：</strong> some() 不会对空数组进行检测。</p>
-<p><strong>注意：</strong> some() 不会改变原始数组。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var ages = [3, 10, 18, 20];</span><br><span class="line"></span><br><span class="line">function checkAdult(age) &#123;</span><br><span class="line">    return age &gt;= 18;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function myFunction() &#123;</span><br><span class="line">    document.getElementById("demo").innerHTML = ages.some(checkAdult);</span><br><span class="line">&#125;</span><br><span class="line">输出结果为:</span><br><span class="line"></span><br><span class="line">true</span><br></pre></td></tr></table></figure>
-<h3 id="6-every"><a href="#6-every" class="headerlink" title="6.every()"></a>6.every()</h3><p>every()方法则与some()方法相反，every()方法是检测到有一个元素不满足，则整个表达式返回 <em>false</em> ，且剩余的元素不会再进行检测。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">检测数组 ages 的所有元素是否都大于等于 18 :</span><br><span class="line"></span><br><span class="line">var ages = [32, 33, 16, 40];</span><br><span class="line"></span><br><span class="line">function checkAdult(age) &#123;</span><br><span class="line">    return age &gt;= 18;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function myFunction() &#123;</span><br><span class="line">    document.getElementById("demo").innerHTML = ages.every(checkAdult);</span><br><span class="line">&#125;</span><br><span class="line">输出结果为:</span><br><span class="line"></span><br><span class="line">false</span><br></pre></td></tr></table></figure>
-<h2 id="关于更多的对象属性方法请点击此查看"><a href="#关于更多的对象属性方法请点击此查看" class="headerlink" title="关于更多的对象属性方法请点击此查看"></a><a href="http://www.runoob.com/jsref/jsref-obj-array.html" target="_blank" rel="noopener">关于更多的对象属性方法请点击此查看</a></h2>
-      
+        <blockquote>
+<p>​    记录码字过程的小知识,持续更新</p>
+</blockquote>
+<h3 id="1-函数防抖"><a href="#1-函数防抖" class="headerlink" title="1.函数防抖"></a>1.函数防抖</h3><blockquote>
+<p>​    lodash 是第三方JavaScript工具函数库</p>
+</blockquote>
+<p>原理：使用闭包，每次调用的时候把上一次的定时器清除</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">callback,time</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> timer</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//清除定时器</span></span><br><span class="line">    <span class="built_in">window</span>.clearTimeout(timer)&#123;</span><br><span class="line">      timwe =<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback()</span><br><span class="line">      &#125;,time)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板，支持我买个服务器！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/blogImg/timg.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/blogImg/yes.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
+
       
     </div>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -392,7 +260,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://dobinspark.com/2018/07/25/4.javascript数组操作/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://dobinspark.com/2018/08/30/5.小知识/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -407,8 +275,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/07/18/3.H5新增API/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">H5新增API</div>
+    <a href="/2018/06/26/2.http/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP请求与服务器响应流程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -427,19 +295,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-数组的常用方法-—》Array-对象属性"><span class="toc-number">1.</span> <span class="toc-text">一 数组的常用方法 —》Array 对象属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数组创建"><span class="toc-number">1.1.</span> <span class="toc-text">1.数组创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数组元素的删除"><span class="toc-number">1.2.</span> <span class="toc-text">2. 数组元素的删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数组元素的添加"><span class="toc-number">1.3.</span> <span class="toc-text">3. 数组元素的添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-数组的截取和合并"><span class="toc-number">1.4.</span> <span class="toc-text">4. 数组的截取和合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-数组的复制"><span class="toc-number">1.5.</span> <span class="toc-text">5.数组的复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-数组排序"><span class="toc-number">1.6.</span> <span class="toc-text">6.数组排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-数组中的所有元素转换为一个字符串"><span class="toc-number">1.7.</span> <span class="toc-text">7.数组中的所有元素转换为一个字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-返回指定值在数组中的位置"><span class="toc-number">1.8.</span> <span class="toc-text">8. 返回指定值在数组中的位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-数组迭代过程"><span class="toc-number">2.</span> <span class="toc-text">二 数组迭代过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-filter"><span class="toc-number">2.1.</span> <span class="toc-text">1.filter()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-find"><span class="toc-number">2.2.</span> <span class="toc-text">2.find()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-findIndex"><span class="toc-number">2.3.</span> <span class="toc-text">3.findIndex()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-forEach-遍历数组"><span class="toc-number">2.4.</span> <span class="toc-text">4.forEach() 遍历数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-some"><span class="toc-number">2.5.</span> <span class="toc-text">5.some()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-every"><span class="toc-number">2.6.</span> <span class="toc-text">6.every()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于更多的对象属性方法请点击此查看"><span class="toc-number">3.</span> <span class="toc-text">关于更多的对象属性方法请点击此查看</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -580,22 +435,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Dom</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -604,7 +443,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Dom</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
             <div class="clearfix"></div>
