@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dobin | 世德">
 <meta property="og:description" content="记录码字过程的小知识,持续更新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T05:56:01.852Z">
+<meta property="og:updated_time" content="2018-09-26T03:39:45.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录码字过程的小知识">
 <meta name="twitter:description" content="记录码字过程的小知识,持续更新">
@@ -197,7 +197,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数防抖"><span class="toc-number">1.</span> <span class="toc-text">1.函数防抖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-axios"><span class="toc-number">2.</span> <span class="toc-text">2.axios</span></a></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数防抖"><span class="toc-number">1.</span> <span class="toc-text">1.函数防抖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-axios"><span class="toc-number">2.</span> <span class="toc-text">2.axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-底层分析"><span class="toc-number">3.</span> <span class="toc-text">3.webpack 底层分析</span></a></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -233,6 +233,15 @@
 </blockquote>
 <p>响应组成,response由以下几部分信息组成</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 服务端返回的数据</span></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 服务端返回的状态码</span></span><br><span class="line">  status: <span class="number">200</span>,</span><br><span class="line">  <span class="comment">// 服务端返回的状态信息</span></span><br><span class="line">  statusText: <span class="string">'OK'</span>,</span><br><span class="line">  <span class="comment">// 响应头</span></span><br><span class="line">  <span class="comment">// 所有的响应头名称都是小写</span></span><br><span class="line">  headers: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// axios请求配置</span></span><br><span class="line">  config: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 请求</span></span><br><span class="line">  request: &#123;&#125;s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-webpack-底层分析"><a href="#3-webpack-底层分析" class="headerlink" title="3.webpack 底层分析"></a>3.webpack 底层分析</h3><ul>
+<li>将所有模块的代码放人到函数中，用一个数组保存起来</li>
+<li>可根据require时传入的数组索引，能知道需要那一行代码片段</li>
+<li>从数组张红，根据索引取出包含我们代码的函数</li>
+<li>执行该函数，传入一个对象 module.exports</li>
+<li>代码按照约定，正好是用module.exports =”xxx”进行赋值</li>
+<li>调用函数结束后，module.exports从原来的空对象，就有值了</li>
+<li>最终return module.exports 作为require函数的返回值</li>
+</ul>
 
       
 
@@ -385,7 +394,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数防抖"><span class="toc-number">1.</span> <span class="toc-text">1.函数防抖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-axios"><span class="toc-number">2.</span> <span class="toc-text">2.axios</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数防抖"><span class="toc-number">1.</span> <span class="toc-text">1.函数防抖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-axios"><span class="toc-number">2.</span> <span class="toc-text">2.axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-webpack-底层分析"><span class="toc-number">3.</span> <span class="toc-text">3.webpack 底层分析</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -530,22 +539,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -558,11 +551,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
