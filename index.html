@@ -171,6 +171,140 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-9.缓存规则解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/30/9.缓存规则解析/">HTTP缓存机制与原理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/30/9.缓存规则解析/" class="archive-article-date">
+  	<time datetime="2018-09-30T02:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-30</time>
+</a>
+        
+      </header>
+    
+
+
+
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>缓存前言</p>
+<p>​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存）</p>
+<p>​    而浏览器缓存也有很多方式，比如：HTTP缓存、localstrong、cookie等，下面将侧重于描述讨论一下HTTP缓存的相关话题。</p>
+<p>缓存相对于浏览器来说，我理解的意思让第二次请求同样的数据加载的更快，页面显示更快，减小二次请求给服务器带来的带宽等压力。</p>
+<p> 浏览器与服务器之间通信是通过HTTP报文发送及响应数据</p>
+<ul>
+<li>浏览器———&gt;服务器，发送请求(request)报文</li>
+<li>服务器———&gt;浏览器，返回响应(response)报文</li>
+</ul>
+<p>报文主要分为：</p>
+<ul>
+<li>头部（header）：定义缓存的规则明细</li>
+<li>主体（body）:  HTTP请求输送的数据</li>
+</ul>
+<h2 id="缓存规则解析"><a href="#缓存规则解析" class="headerlink" title="缓存规则解析"></a>缓存规则解析</h2><p>两种方式：强制缓存 与 协商缓存</p>
+<p>区别解析： 强制缓存如果命中缓存不需要与服务器发生交互，而协商缓存不管是否命中都要和服务器发生交互，而且强制缓存的优先级高于协商缓存</p>
+<h3 id="1-强制缓存"><a href="#1-强制缓存" class="headerlink" title="1.强制缓存"></a>1.强制缓存</h3><p>​    在强制缓存数据未失效的情况下，浏览器可以直接使用缓存的数据，那么浏览器是怎么判断强制缓存的数据失效了没有呢？</p>
+<p>​    浏览器向服务器请求数据时，服务器会将数据和缓存规则一并返回，缓存规则信息包含在响应header中，</p>
+<p>​    对于强制缓存来说，响应header中会有两个字段来标明失效规则（Expires/Cache-Control）</p>
+<h4 id="expires"><a href="#expires" class="headerlink" title="expires"></a>expires</h4><p>Expires 指缓存过期的时间，超过了这个时间点就代表资源过期。</p>
+<p>有一个问题是由于使用具体时间，如果时间表示出错或者没有转换到正确的时区都可能造成缓存生命周期出错。并且 Expires 是 HTTP/1.0 的标准，现在更倾向于用 HTTP/1.1 中定义的 Cache-Control。两个同时存在时也是 Cache-Control 的优先级更高。</p>
+<h4 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a><strong>Cache-Control</strong></h4><p>Cache-Control 主要有以下属性：</p>
+<ul>
+<li><strong>max-age  </strong> ：指定一个时间长度，在这个时间段内缓存是有效的，单位是s。</li>
+<li><strong>private</strong> : 表明响应只能被单个用户（可能是操作系统用户、浏览器用户）缓存，是非共享的，不能被代理服务器缓存</li>
+<li><strong>public</strong> ：表明响应可以被任何对象（发送请求的客户端、代理服务器等等）缓存</li>
+<li><strong>no-store</strong> ： 禁止缓存，每次请求都要向服务器重新获取数据。</li>
+<li><strong>no-cache</strong> :  需要使用协商缓存来验证缓存数据</li>
+</ul>
+<h3 id="2-协商缓存"><a href="#2-协商缓存" class="headerlink" title="2.协商缓存"></a>2.协商缓存</h3><p>​    需要进行比较判断是否可以使用缓存，浏览器和服务器端通过某种验证机制验证当前请求资源是否可以使用缓存。</p>
+<p>​    <strong>浏览器第一次请求数据之后会将数据和响应头部的缓存标识存储起来。再次请求时会带上存储的头部字段，服务器端验证是否可用。如果返回 304 Not Modified，代表资源没有发生改变可以使用缓存的数据，获取新的过期时间。反之返回 200 就相当于重新请求了一遍资源并替换旧资源</strong></p>
+<h4 id="Last-modified-If-Modified-Since"><a href="#Last-modified-If-Modified-Since" class="headerlink" title="Last-modified    /  If-Modified-Since"></a><strong>Last-modified    /  If-Modified-Since</strong></h4><p>​    Last-modified: 服务器端资源的最后修改时间，响应头部会带上这个标识。第一次请求之后，浏览器记录这个时间，再次请求时，请求头部带上 If-Modified-Since 即为之前记录下的时间。服务器端收到带 If-Modified-Since 的请求后会去和资源的最后修改时间对比。若修改过就返回最新资源，状态码 200，若没有修改过则返回 304。</p>
+<h4 id="Etag-If-None-Match"><a href="#Etag-If-None-Match" class="headerlink" title="Etag/If-None-Match"></a>Etag/If-None-Match</h4><p>优先级高于Last-Modified  /  If-Modified-Since</p>
+<p>由服务器端上生成的一段 hash 字符串，第一次请求时响应头带上 ETag: abcd，之后的请求中带上 If-None-Match: abcd，服务器检查 ETag，返回 304 或 200。</p>
+<h4 id="关于-last-modified-和-Etag-区别："><a href="#关于-last-modified-和-Etag-区别：" class="headerlink" title="关于 last-modified 和 Etag 区别："></a>关于 last-modified 和 Etag 区别：</h4><ul>
+<li>某些服务器不能精确得到资源的最后修改时间，这样就无法通过最后修改时间判断资源是否更新。</li>
+<li>Last-modified 只能精确到秒。</li>
+<li>一些资源的最后修改时间改变了，但是内容没改变，使用 Last-modified 看不出内容没有改变。</li>
+<li>Etag 的精度比 Last-modified 高，属于强验证，要求资源字节级别的一致，优先级高。如果服务器端有提供 ETag 的话，必须先对 ETag 进行 Conditional Request。</li>
+</ul>
+<p>应用场景；</p>
+<p>可以考虑缓存的内容：不经常发生内容变动</p>
+<ul>
+<li>css样式文件</li>
+<li>js文件</li>
+<li>logo、图标</li>
+<li>html文件</li>
+<li>可以下载的内容</li>
+</ul>
+<p>不应该被缓存的：</p>
+<p>​    数据经常发生变动，敏感的一些请求（GET）</p>
+<h2 id="结语："><a href="#结语：" class="headerlink" title="结语："></a>结语：</h2><p>​    这里参考线上的一些相关文章做了个总结，实际使用 HTTP 缓存需要后端配合配置，具体情况具体对待。</p>
+<p>参考文章：<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn#etag" target="_blank" rel="noopener">https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn#etag</a></p>
+<p><a href="http://www.alloyteam.com/2016/03/discussion-on-web-caching/#prettyPhoto" target="_blank" rel="noopener">http://www.alloyteam.com/2016/03/discussion-on-web-caching/#prettyPhoto</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/29750583" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29750583</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">HTTP缓存</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/30/9.缓存规则解析/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-8.webpack笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -298,11 +432,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
         		</li>
       		
 		</ul>
@@ -734,15 +868,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
         		</li>
       		
 		</ul>
@@ -898,26 +1032,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -930,11 +1044,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
             
             <div class="clearfix"></div>

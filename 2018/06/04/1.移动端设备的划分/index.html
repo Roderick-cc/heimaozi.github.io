@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dobin | 世德">
 <meta property="og:description" content="### 1.移动端. $1$.通过查询screen的宽度来指定某个宽度区间的网页布局    meat:vp  超小屏幕（手机） 768px  以下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-04T06:14:10.074Z">
+<meta property="og:updated_time" content="2018-09-28T02:26:04.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Test">
 <meta name="twitter:description" content="### 1.移动端. $1$.通过查询screen的宽度来指定某个宽度区间的网页布局    meat:vp  超小屏幕（手机） 768px  以下">
@@ -197,7 +197,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-栅格布局"><span class="toc-number">1.</span> <span class="toc-text">2.栅格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择器"><span class="toc-number">2.</span> <span class="toc-text">3.选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-git搭建"><span class="toc-number">3.</span> <span class="toc-text">4.git搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-boorstrap导航"><span class="toc-number">4.</span> <span class="toc-text">5.boorstrap导航</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象创建方式、for-in-循环遍历"><span class="toc-number"></span> <span class="toc-text">6.对象创建方式、for in 循环遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-数组、字符串的常用方法"><span class="toc-number"></span> <span class="toc-text">7.数组、字符串的常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Dom自定义属性操作-getAttribute-…"><span class="toc-number"></span> <span class="toc-text">8.Dom自定义属性操作-getAttribute()…</span></a>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-栅格布局"><span class="toc-number">1.</span> <span class="toc-text">2.栅格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择器"><span class="toc-number">2.</span> <span class="toc-text">3.选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-git搭建"><span class="toc-number">3.</span> <span class="toc-text">4.git搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-boorstrap导航"><span class="toc-number">4.</span> <span class="toc-text">5.boorstrap导航</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象创建方式、for-in-循环遍历"><span class="toc-number"></span> <span class="toc-text">6.对象创建方式、for in 循环遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-字符串的常用方法"><span class="toc-number"></span> <span class="toc-text">7.字符串的常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Dom自定义属性操作-getAttribute-…"><span class="toc-number"></span> <span class="toc-text">8.Dom自定义属性操作-getAttribute()…</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-less"><span class="toc-number"></span> <span class="toc-text">9.less</span></a>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -262,9 +262,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age,job)&#123;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.age = age;</span><br><span class="line">  this.job = job;</span><br><span class="line">  this.sayHi = function()&#123;</span><br><span class="line">  	console.log('Hello,everyBody');</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person('张三', 22, 'actor');</span><br></pre></td></tr></table></figure>
 <p>​    遍历对象的属性</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var obj=&#123;&#125;</span><br><span class="line">for(var i=0;i&lt;10;i++)&#123;</span><br><span class="line">  obj[i]=i*2; </span><br><span class="line">&#125;</span><br><span class="line">for(var key in obj)&#123;</span><br><span class="line">  console.log(key+'=='+obj[key])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="7-数组、字符串的常用方法"><a href="#7-数组、字符串的常用方法" class="headerlink" title="7.数组、字符串的常用方法"></a>7.数组、字符串的常用方法</h2><p>​    前言：push()、shift()、unshift()、reverse()、sort()、splice()、indexOf()</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//1 栈（stack）操作 先进后出</span><br><span class="line">1.push（） //添加元素到数组的末尾</span><br><span class="line">2.pop（）//删除数组末尾的元素</span><br><span class="line"></span><br><span class="line">3.shift() //删除数组最前面（头部）的元素</span><br><span class="line">4.unshift() //添加元素到数组的头部</span><br><span class="line"></span><br><span class="line">5.indexOf('')  //找出某个元素在数组中的索引从0开始</span><br><span class="line">6.splice(pos元素, 1索引) //过索引删除某个元素</span><br><span class="line">7.slice()复制一个数组</span><br><span class="line"></span><br><span class="line">// 3 排序方法</span><br><span class="line">reverse（） //翻转数组</span><br><span class="line">sort（）； //即使是数组sort也是根据字符，从小到大排序</span><br><span class="line">// 4 操作方法</span><br><span class="line">concat（） //把参数拼接到当前数组</span><br><span class="line">// 5 位置方法</span><br><span class="line">indexOf()、lastIndexOf()   //如果没找到返回-1</span><br><span class="line">// 6 迭代方法 不会修改原数组(可选)</span><br><span class="line">every()、filter()、forEach()、map()、some()</span><br><span class="line">// 7 方法将数组的所有元素连接到一个字符串中。</span><br><span class="line">join()</span><br></pre></td></tr></table></figure>
-<p>​    字符串</p>
+<h2 id="7-字符串的常用方法"><a href="#7-字符串的常用方法" class="headerlink" title="7.字符串的常用方法"></a>7.字符串的常用方法</h2><p>​    </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">charAt()    	//获取指定位置处字符</span><br><span class="line">charCodeAt()  	//获取指定位置处字符的ASCII码</span><br><span class="line">concat()   		//拼接字符串，等效于+，+更常用</span><br><span class="line">slice()    		//从start位置开始，截取到end位置，end取不到</span><br><span class="line">substring() 	//从start位置开始，截取到end位置，end取不到</span><br><span class="line">substr()   		//从start位置开始，截取length个字符</span><br><span class="line">// 3 位置方法</span><br><span class="line">indexOf()   	//返回指定内容在元字符串中的位置</span><br><span class="line">lastIndexOf() 	//从后往前找，只找第一个匹配的</span><br><span class="line">// 4 去除空白   </span><br><span class="line">trim()  		//只能去除字符串前后的空白</span><br><span class="line">// 5 大小写转换方法</span><br><span class="line">to(Locale)UpperCase() 	//转换大写</span><br><span class="line">to(Locale)LowerCase() 	//转换小写</span><br></pre></td></tr></table></figure>
 <p> innerHTML和innerText</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var box = document.getElementById('box');</span><br><span class="line">box.innerHTML = '我是文本&lt;p&gt;我会生成为标签&lt;/p&gt;';</span><br><span class="line">box.innerText = '我是文本&lt;p&gt;我不会生成为标签&lt;/p&gt;';</span><br></pre></td></tr></table></figure>
@@ -274,8 +272,9 @@
 <li>removeAttribute() 移除标签行内属性</li>
 <li>与element.属性的区别: 上述三个方法用于获取任意的行内属性。</li>
 </ul>
-<p>## </p>
-<p>## </p>
+<h2 id="9-less"><a href="#9-less" class="headerlink" title="9.less"></a>9.less</h2><p>浏览器不识别需解析成css代码，通过引入less解析插件（less.js）</p>
+<p>引入less文件需要加上 type=”text/less”</p>
+<p>加上<script>less.watch();</script>,实现无刷新预览样式，以HTTP形式打开网页预览</p>
 
       
 
@@ -436,7 +435,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-栅格布局"><span class="toc-number">1.</span> <span class="toc-text">2.栅格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择器"><span class="toc-number">2.</span> <span class="toc-text">3.选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-git搭建"><span class="toc-number">3.</span> <span class="toc-text">4.git搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-boorstrap导航"><span class="toc-number">4.</span> <span class="toc-text">5.boorstrap导航</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象创建方式、for-in-循环遍历"><span class="toc-number"></span> <span class="toc-text">6.对象创建方式、for in 循环遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-数组、字符串的常用方法"><span class="toc-number"></span> <span class="toc-text">7.数组、字符串的常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Dom自定义属性操作-getAttribute-…"><span class="toc-number"></span> <span class="toc-text">8.Dom自定义属性操作-getAttribute()…</span></a>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-栅格布局"><span class="toc-number">1.</span> <span class="toc-text">2.栅格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择器"><span class="toc-number">2.</span> <span class="toc-text">3.选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-git搭建"><span class="toc-number">3.</span> <span class="toc-text">4.git搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-boorstrap导航"><span class="toc-number">4.</span> <span class="toc-text">5.boorstrap导航</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象创建方式、for-in-循环遍历"><span class="toc-number"></span> <span class="toc-text">6.对象创建方式、for in 循环遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-字符串的常用方法"><span class="toc-number"></span> <span class="toc-text">7.字符串的常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Dom自定义属性操作-getAttribute-…"><span class="toc-number"></span> <span class="toc-text">8.Dom自定义属性操作-getAttribute()…</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-less"><span class="toc-number"></span> <span class="toc-text">9.less</span></a>
                     </div>
                 </span>
             </div>
@@ -581,26 +580,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -613,11 +592,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
             
             <div class="clearfix"></div>
