@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://dobinspark.com">
   <title>HTTP缓存机制与原理 | Dobin | 世德</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存） ​    而浏览器缓存也有很多方式，比如：HTTP缓存、localstrong、cookie等，下面将侧重于描述讨论一下HTTP缓存的相关话题。 缓存相对于浏览器来说，我理解的意思让第二次请求同样的数据加载的更快，页面显示更快，减小二次请求给服务器带来的带宽等压力。  浏览器与服务器之间通信是">
+  <meta name="description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存）">
 <meta name="keywords" content="HTTP缓存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP缓存机制与原理">
 <meta property="og:url" content="https://dobinspark.com/2018/09/30/9.缓存规则解析/index.html">
 <meta property="og:site_name" content="Dobin | 世德">
-<meta property="og:description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存） ​    而浏览器缓存也有很多方式，比如：HTTP缓存、localstrong、cookie等，下面将侧重于描述讨论一下HTTP缓存的相关话题。 缓存相对于浏览器来说，我理解的意思让第二次请求同样的数据加载的更快，页面显示更快，减小二次请求给服务器带来的带宽等压力。  浏览器与服务器之间通信是">
+<meta property="og:description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T09:43:08.880Z">
+<meta property="og:updated_time" content="2018-09-30T10:05:01.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP缓存机制与原理">
-<meta name="twitter:description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存） ​    而浏览器缓存也有很多方式，比如：HTTP缓存、localstrong、cookie等，下面将侧重于描述讨论一下HTTP缓存的相关话题。 缓存相对于浏览器来说，我理解的意思让第二次请求同样的数据加载的更快，页面显示更快，减小二次请求给服务器带来的带宽等压力。  浏览器与服务器之间通信是">
+<meta name="twitter:description" content="缓存前言 ​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存）">
   
     <link rel="alternative" href="/atom.xml" title="Dobin | 世德" type="application/atom+xml">
   
@@ -221,6 +221,7 @@
       
         <p>缓存前言</p>
 <p>​    Web缓存大致可以分为：数据库缓存、浏览器缓存、服务器缓存（CDN、代理服务器缓存）</p>
+<a id="more"></a>
 <p>​    而浏览器缓存也有很多方式，比如：HTTP缓存、localstrong、cookie等，下面将侧重于描述讨论一下HTTP缓存的相关话题。</p>
 <p>缓存相对于浏览器来说，我理解的意思让第二次请求同样的数据加载的更快，页面显示更快，减小二次请求给服务器带来的带宽等压力。</p>
 <p> 浏览器与服务器之间通信是通过HTTP报文发送及响应数据</p>
@@ -531,6 +532,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">case</a>
               </li>
              
@@ -543,22 +552,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
@@ -567,11 +560,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
               </li>
             
             <div class="clearfix"></div>
