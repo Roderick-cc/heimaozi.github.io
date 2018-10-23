@@ -171,6 +171,115 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10.cookie" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/20/10.cookie/">cookie小记</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/20/10.cookie/" class="archive-article-date">
+  	<time datetime="2018-10-20T02:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+</a>
+        
+      </header>
+    
+
+
+
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过此文，你可以了解：</p>
+<p>1.cookie是什么，cookie的缺点和session的区别</p>
+<p>2.区分cookie和webStorage，简单介绍浏览器的本地存储的两种方式：sessionStorage和localStorage</p>
+<h3 id="1-cookie是什么"><a href="#1-cookie是什么" class="headerlink" title="1. cookie是什么"></a>1. cookie是什么</h3><p>ookie是当你浏览网站的时候，它其中记录了你的用户名、密码、浏览的网页、停留的时间等等信息。当你再次来到这个网站时，web服务器会先看看有没有它上次留下来的cookie。如果有的话，会读取cookie中的内容，来判断用户对象，并获取相关的数据，不需要服务器再起发送响应数据，减少了服务器的请求次数。</p>
+<p>简单的说就是：</p>
+<p>(1) cookie是以小的文本文件形式（即纯文本），完全存在于客户端；cookie保存了<strong>登录的凭证</strong>，有了它，只需要在下次请求时带着cookie发送，就不必再重新输入用户名、密码等重新登录了。</p>
+<p>(2) 是设计用来在<strong>服务端</strong>和<strong>客户端</strong>进行<strong>信息传递</strong>的；</p>
+<blockquote>
+<p>第一次请求时候： 客户端发送请求到服务端，服务端响应（请求头中用set-cookie标识用户身份）</p>
+</blockquote>
+<blockquote>
+<p>第二次请求：浏览器会把cookie放到请求头一起提交给服务器，cookie携带了会话ID信息。服务器会根据cookie辨认用户身份：由于cookie带了会话的ID信息，可以通过cookie找到对应会话，通过判断会话来判断用户状态。</p>
+</blockquote>
+<h3 id="2-cookie-的缺点"><a href="#2-cookie-的缺点" class="headerlink" title="2.cookie 的缺点"></a>2.cookie 的缺点</h3><p>cookie的缺点：</p>
+<p>​    (1) 每个特定域名下的cookie数量有限：</p>
+<p>​        IE6或IE6-(IE6以下版本)：最多20个cookie</p>
+<p>​        IE7或IE7+(IE7以上版本)：最多50个cookie</p>
+<p>​        FF:最多50个cookie</p>
+<p>​        Opera:最多30个cookie</p>
+<p>​        Chrome和safari没有硬性限制</p>
+<p>​    当超过单个域名限制之后，再设置cookie，浏览器就会清除以前设置的cookie。IE和Opera会清理近期最少使用的cookie，FF会随机清理cookie；</p>
+<p>​    (2) 存储量太小，只有4KB；</p>
+<p>​    (3) 每次HTTP请求都会发送到服务端，影响获取资源的效率；</p>
+<p>​    (4) 需要自己封装获取、设置、删除cookie的方法；</p>
+<h3 id="3-cookie-和session的区别"><a href="#3-cookie-和session的区别" class="headerlink" title="3.cookie 和session的区别"></a>3.cookie 和session的区别</h3><p>cookie是存在客户端浏览器上，session会话存在服务器上。会话对象用来存储特定用户会话所需的属性及配置信息。当用户请求来自应用程序的web页时，如果该用户还没有会话，则服务器将自动创建一个会话对象。当会话过期或被放弃后，服务器将终止该会话。cookie和会话需要配合</p>
+<h3 id="4-web-storage和cookie的区别"><a href="#4-web-storage和cookie的区别" class="headerlink" title="4.web storage和cookie的区别"></a>4.web storage和cookie的区别</h3><p>(1) web storages和cookie的作用不同，web storage是用于本地大容量存储数据(web storage的存储量大到5MB);而cookie是用于客户端和服务端间的信息传递；</p>
+<p>(2) web storage有setItem、getItem、removeItem、clear等方法，cookie需要我们自己来封装setCookie、getCookie、removeCookie这些方法</p>
+<h3 id="5-浏览器本地存储"><a href="#5-浏览器本地存储" class="headerlink" title="5.浏览器本地存储"></a>5.浏览器本地存储</h3><h4 id="localStorage和sessionStorage"><a href="#localStorage和sessionStorage" class="headerlink" title="localStorage和sessionStorage"></a>localStorage和sessionStorage</h4><p>​    在较高版本的浏览器中，js提供了两种存储方式：sessionStorage和globalStorage。在H5中，用localStorage取代了globalStorage。</p>
+<p>​    sessionStorage用于本地存储一个会话中的数据，这些数据只有在同一个会话中的页面才能访问，并且当会话结束后，数据也随之销毁。所以sessionStorage仅仅是会话级别的存储，而不是一种持久化的本地存储。</p>
+<p>​    localStorage是持久化的本地存储，除非是通过js删除，或者清除浏览器缓存，否则数据是永远不会过期的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/20/10.cookie/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-9.缓存规则解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -467,11 +576,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
         		</li>
       		
 		</ul>
@@ -981,11 +1090,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">note</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1001,19 +1114,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">H5</a>
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">note</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1021,7 +1134,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP缓存</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dobinspark.com">
-  <title>Archives | Dobin | 世德</title>
+  <title>cookie小记 | Dobin | 世德</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录成长，记录生活，不时分享有趣之物！">
-<meta name="keywords" content="Dobin，dobinspark，罗世德的博客，前端开发，H5，全栈学习，程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dobin | 世德">
-<meta property="og:url" content="https://dobinspark.com/archives/index.html">
+  <meta name="description" content="通过此文，你可以了解： 1.cookie是什么，cookie的缺点和session的区别 2.区分cookie和webStorage，简单介绍浏览器的本地存储的两种方式：sessionStorage和localStorage 1. cookie是什么ookie是当你浏览网站的时候，它其中记录了你的用户名、密码、浏览的网页、停留的时间等等信息。当你再次来到这个网站时，web服务器会先看看有没有它上次">
+<meta name="keywords" content="cookie">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cookie小记">
+<meta property="og:url" content="https://dobinspark.com/2018/10/20/10.cookie/index.html">
 <meta property="og:site_name" content="Dobin | 世德">
-<meta property="og:description" content="记录成长，记录生活，不时分享有趣之物！">
+<meta property="og:description" content="通过此文，你可以了解： 1.cookie是什么，cookie的缺点和session的区别 2.区分cookie和webStorage，简单介绍浏览器的本地存储的两种方式：sessionStorage和localStorage 1. cookie是什么ookie是当你浏览网站的时候，它其中记录了你的用户名、密码、浏览的网页、停留的时间等等信息。当你再次来到这个网站时，web服务器会先看看有没有它上次">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-23T06:58:07.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dobin | 世德">
-<meta name="twitter:description" content="记录成长，记录生活，不时分享有趣之物！">
+<meta name="twitter:title" content="cookie小记">
+<meta name="twitter:description" content="通过此文，你可以了解： 1.cookie是什么，cookie的缺点和session的区别 2.区分cookie和webStorage，简单介绍浏览器的本地存储的两种方式：sessionStorage和localStorage 1. cookie是什么ookie是当你浏览网站的时候，它其中记录了你的用户名、密码、浏览的网页、停留的时间等等信息。当你再次来到这个网站时，web服务器会先看看有没有它上次">
   
     <link rel="alternative" href="/atom.xml" title="Dobin | 世德" type="application/atom+xml">
   
@@ -169,36 +170,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-10.cookie" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/20/10.cookie/" class="archive-article-date">
-  	<time datetime="2018-10-20T02:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/20/10.cookie/">cookie小记</a>
+    <h1 class="article-title" itemprop="name">
+      cookie小记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/20/10.cookie/" class="archive-article-date">
+  	<time datetime="2018-10-20T02:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+</a>
+        
+      </header>
+    
+
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-cookie是什么"><span class="toc-number">1.</span> <span class="toc-text">1. cookie是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cookie-的缺点"><span class="toc-number">2.</span> <span class="toc-text">2.cookie 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-cookie-和session的区别"><span class="toc-number">3.</span> <span class="toc-text">3.cookie 和session的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-web-storage和cookie的区别"><span class="toc-number">4.</span> <span class="toc-text">4.web storage和cookie的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-浏览器本地存储"><span class="toc-number">5.</span> <span class="toc-text">5.浏览器本地存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#localStorage和sessionStorage"><span class="toc-number">5.1.</span> <span class="toc-text">localStorage和sessionStorage</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+      
+
+
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>通过此文，你可以了解：</p>
+<p>1.cookie是什么，cookie的缺点和session的区别</p>
+<p>2.区分cookie和webStorage，简单介绍浏览器的本地存储的两种方式：sessionStorage和localStorage</p>
+<h3 id="1-cookie是什么"><a href="#1-cookie是什么" class="headerlink" title="1. cookie是什么"></a>1. cookie是什么</h3><p>ookie是当你浏览网站的时候，它其中记录了你的用户名、密码、浏览的网页、停留的时间等等信息。当你再次来到这个网站时，web服务器会先看看有没有它上次留下来的cookie。如果有的话，会读取cookie中的内容，来判断用户对象，并获取相关的数据，不需要服务器再起发送响应数据，减少了服务器的请求次数。</p>
+<p>简单的说就是：</p>
+<p>(1) cookie是以小的文本文件形式（即纯文本），完全存在于客户端；cookie保存了<strong>登录的凭证</strong>，有了它，只需要在下次请求时带着cookie发送，就不必再重新输入用户名、密码等重新登录了。</p>
+<p>(2) 是设计用来在<strong>服务端</strong>和<strong>客户端</strong>进行<strong>信息传递</strong>的；</p>
+<blockquote>
+<p>第一次请求时候： 客户端发送请求到服务端，服务端响应（请求头中用set-cookie标识用户身份）</p>
+</blockquote>
+<blockquote>
+<p>第二次请求：浏览器会把cookie放到请求头一起提交给服务器，cookie携带了会话ID信息。服务器会根据cookie辨认用户身份：由于cookie带了会话的ID信息，可以通过cookie找到对应会话，通过判断会话来判断用户状态。</p>
+</blockquote>
+<h3 id="2-cookie-的缺点"><a href="#2-cookie-的缺点" class="headerlink" title="2.cookie 的缺点"></a>2.cookie 的缺点</h3><p>cookie的缺点：</p>
+<p>​    (1) 每个特定域名下的cookie数量有限：</p>
+<p>​        IE6或IE6-(IE6以下版本)：最多20个cookie</p>
+<p>​        IE7或IE7+(IE7以上版本)：最多50个cookie</p>
+<p>​        FF:最多50个cookie</p>
+<p>​        Opera:最多30个cookie</p>
+<p>​        Chrome和safari没有硬性限制</p>
+<p>​    当超过单个域名限制之后，再设置cookie，浏览器就会清除以前设置的cookie。IE和Opera会清理近期最少使用的cookie，FF会随机清理cookie；</p>
+<p>​    (2) 存储量太小，只有4KB；</p>
+<p>​    (3) 每次HTTP请求都会发送到服务端，影响获取资源的效率；</p>
+<p>​    (4) 需要自己封装获取、设置、删除cookie的方法；</p>
+<h3 id="3-cookie-和session的区别"><a href="#3-cookie-和session的区别" class="headerlink" title="3.cookie 和session的区别"></a>3.cookie 和session的区别</h3><p>cookie是存在客户端浏览器上，session会话存在服务器上。会话对象用来存储特定用户会话所需的属性及配置信息。当用户请求来自应用程序的web页时，如果该用户还没有会话，则服务器将自动创建一个会话对象。当会话过期或被放弃后，服务器将终止该会话。cookie和会话需要配合</p>
+<h3 id="4-web-storage和cookie的区别"><a href="#4-web-storage和cookie的区别" class="headerlink" title="4.web storage和cookie的区别"></a>4.web storage和cookie的区别</h3><p>(1) web storages和cookie的作用不同，web storage是用于本地大容量存储数据(web storage的存储量大到5MB);而cookie是用于客户端和服务端间的信息传递；</p>
+<p>(2) web storage有setItem、getItem、removeItem、clear等方法，cookie需要我们自己来封装setCookie、getCookie、removeCookie这些方法</p>
+<h3 id="5-浏览器本地存储"><a href="#5-浏览器本地存储" class="headerlink" title="5.浏览器本地存储"></a>5.浏览器本地存储</h3><h4 id="localStorage和sessionStorage"><a href="#localStorage和sessionStorage" class="headerlink" title="localStorage和sessionStorage"></a>localStorage和sessionStorage</h4><p>​    在较高版本的浏览器中，js提供了两种存储方式：sessionStorage和globalStorage。在H5中，用localStorage取代了globalStorage。</p>
+<p>​    sessionStorage用于本地存储一个会话中的数据，这些数据只有在同一个会话中的页面才能访问，并且当会话结束后，数据也随之销毁。所以sessionStorage仅仅是会话级别的存储，而不是一种持久化的本地存储。</p>
+<p>​    localStorage是持久化的本地存储，除非是通过js删除，或者清除浏览器缓存，否则数据是永远不会过期的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,351 +268,144 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://dobinspark.com/2018/10/20/10.cookie/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/30/9.缓存规则解析/" class="archive-article-date">
-  	<time datetime="2018-09-30T02:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/30/9.缓存规则解析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP缓存机制与原理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/30/9.缓存规则解析/">HTTP缓存机制与原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">HTTP缓存</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-cookie是什么"><span class="toc-number">1.</span> <span class="toc-text">1. cookie是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cookie-的缺点"><span class="toc-number">2.</span> <span class="toc-text">2.cookie 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-cookie-和session的区别"><span class="toc-number">3.</span> <span class="toc-text">3.cookie 和session的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-web-storage和cookie的区别"><span class="toc-number">4.</span> <span class="toc-text">4.web storage和cookie的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-浏览器本地存储"><span class="toc-number">5.</span> <span class="toc-text">5.浏览器本地存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#localStorage和sessionStorage"><span class="toc-number">5.1.</span> <span class="toc-text">localStorage和sessionStorage</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA5Ni8xMzYzMg==" style="margin:30px;margin-top:20px;padding-left:6.5%;padding-right:6.5%;background-color:#ffffff;">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� -->
+
+
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/8.webpack笔记/" class="archive-article-date">
-  	<time datetime="2018-07-20T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/8.webpack笔记/">webpack note</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/7.vue-1笔记/" class="archive-article-date">
-  	<time datetime="2018-07-18T08:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/7.vue-1笔记/">VUE note</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/15/6.nodejs笔记/" class="archive-article-date">
-  	<time datetime="2018-07-15T03:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/15/6.nodejs笔记/">Node note</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/06/5.小知识/" class="archive-article-date">
-  	<time datetime="2018-07-06T03:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/06/5.小知识/">记录码字过程的小知识</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/26/2.http/" class="archive-article-date">
-  	<time datetime="2018-06-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/26/2.http/">HTTP请求与服务器响应流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/1.移动端设备的划分/" class="archive-article-date">
-  	<time datetime="2018-06-04T07:31:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/1.移动端设备的划分/">Test</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">case</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mobile</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Dom</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/04/3.H5新增API和数组操作/" class="archive-article-date">
-  	<time datetime="2018-06-04T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/04/3.H5新增API和数组操作/">H5和ES6数组操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -585,8 +436,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
